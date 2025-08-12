@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Shop</h1>
+    <div class="cart-icon">
+      <a href="#" onclick="showCart()">🛒 <span id="cartCount">0</span></a>
+    </div>
+  </header>
+  <section class="filters">
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="All">All Categories</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Electronics">Electronics</option>
+    </select>
+    <select id="sortFilter" onchange="filterProducts()">
+      <option value="default">Sort by</option>
+      <option value="price-asc">Price Low to High</option>
+      <option value="price-desc">Price High to Low</option>
+    </select>
+  </section>
+  <section id="productList" class="products"></section>
+  <section id="cartSection" class="products" style="display:none;"></section>
+  <h3 id="totalPrice" style="text-align:center; margin-top: 20px;"></h3>
+  <footer>
+    <p>© 2025 My Shop. All rights reserved.</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
+
